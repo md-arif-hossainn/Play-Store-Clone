@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/trendingID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/extra_large_app_design"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/suggestForYouTV"/>
+
+    <TextView
+        android:id="@+id/suggestForYouTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Suggest for you"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trendingID"
+        app:layout_constraintBottom_toTopOf="@+id/suggestRV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        tools:listitem="@layout/common_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suggestForYouTV"/>
+
+    <TextView
+        android:id="@+id/continuePlayingTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue playing"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suggestRV"
+        app:layout_constraintBottom_toTopOf="@+id/continuePlayingDesignID"/>
+
+    <include
+        android:id="@+id/continuePlayingDesignID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/continue_playing_design"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continuePlayingTV"
+        app:layout_constraintBottom_toTopOf="@+id/basedActivityTV"
+        />
+
+    <TextView
+        android:id="@+id/basedActivityTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Based on your recent activity"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/video_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/continuePlayingDesignID"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:listitem="@layout/video_player_design"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/popularGameTV"
+        app:layout_constraintTop_toBottomOf="@+id/basedActivityTV"/>
+
+
+    <include
+        android:id="@+id/popularGameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_text"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/popularGameRV"
+        app:layout_constraintTop_toBottomOf="@+id/video_recycler_view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popularGameRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/game_large_app_design"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/popularGameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clipToPadding="false"/>
+
+    <include
+        android:id="@+id/suggestForYouTV2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_text"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/suggestRV2"
+        app:layout_constraintTop_toBottomOf="@+id/popularGameRV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestRV2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/three_app_design"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/suggestForYouTV2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/multiPlayerTV"/>
+
+    <include
+        android:id="@+id/multiPlayerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_text"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suggestRV2"
+        app:layout_constraintBottom_toTopOf="@+id/multiPlayerRV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/multiPlayerRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/game_large_app_design"
+        app:layout_constraintTop_toBottomOf="@+id/multiPlayerTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/sportsGameTV"
+        android:orientation="horizontal"/>
+
+    <include
+        android:id="@+id/sportsGameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_text"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiPlayerRV"
+        app:layout_constraintBottom_toTopOf="@+id/sportsRV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sportsRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/three_card_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sportsGameTV"
+        android:paddingBottom="15dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

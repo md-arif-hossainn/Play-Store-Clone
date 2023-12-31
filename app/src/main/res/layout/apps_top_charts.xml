@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedScrollerID"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:id="@+id/textLayoutID"
+       android:layout_width="match_parent"
+       android:layout_height="28dp"
+       android:orientation="horizontal"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="10dp"
+       app:layout_constraintBottom_toTopOf="@+id/appTopChartsRV">
+
+      <TextView
+          android:id="@+id/topFreeID"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+         android:text="Top free"
+          android:paddingHorizontal="12dp"
+          android:gravity="center"
+          android:background="@drawable/text_shape"/>
+
+      <TextView
+          android:id="@+id/categoriesID"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="Categories"
+          android:paddingHorizontal="12dp"
+          android:layout_marginStart="8dp"
+          android:gravity="center"
+          android:background="@drawable/text_shape"/>
+
+   </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/appTopChartsRV"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       tools:listitem="@layout/row_app_design"
+       tools:itemCount="5"
+       android:orientation="vertical"
+       android:layout_marginTop="12dp"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       app:layout_constraintTop_toBottomOf="@+id/textLayoutID"
+       />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

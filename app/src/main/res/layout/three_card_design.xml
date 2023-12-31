@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp">
+    <LinearLayout
+        android:id="@+id/cardID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="4dp">
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car2"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="4dp">
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car1"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="4dp">
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car3"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appIcon"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardID"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="4dp">
+
+        <ImageView
+            android:id="@+id/appIconIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car4" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/appName"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFFLINE:Car racing game"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/appTypeTV"
+        app:layout_constraintStart_toEndOf="@+id/appIcon"
+        app:layout_constraintTop_toTopOf="@id/appIcon" />
+
+    <TextView
+        android:id="@+id/appTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gameing"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/versionTV"
+        app:layout_constraintEnd_toStartOf="@+id/featureTV1"
+        app:layout_constraintStart_toStartOf="@+id/appName"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <TextView
+        android:id="@+id/featureTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:text="Entertainment"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/appTypeTV"
+        app:layout_constraintEnd_toStartOf="@+id/featureTV2"
+        app:layout_constraintStart_toEndOf="@+id/appTypeTV"
+        app:layout_constraintTop_toTopOf="@+id/appTypeTV" />
+
+    <TextView
+        android:id="@+id/featureTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:text="Grouping"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/featureTV1"
+        app:layout_constraintTop_toTopOf="@+id/featureTV1"
+        app:layout_constraintStart_toEndOf="@+id/featureTV1"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <TextView
+        android:id="@+id/versionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.2 *"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/appIcon"
+        app:layout_constraintEnd_toStartOf="@+id/appSizeTV"
+        app:layout_constraintStart_toStartOf="@+id/appTypeTV"
+        app:layout_constraintTop_toBottomOf="@+id/appTypeTV" />
+
+    <TextView
+        android:id="@+id/appSizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="27 MB"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/versionTV"
+        app:layout_constraintStart_toEndOf="@+id/versionTV"
+        app:layout_constraintBottom_toBottomOf="@+id/versionTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

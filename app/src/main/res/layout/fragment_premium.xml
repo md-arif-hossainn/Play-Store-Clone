@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedScrollerID"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PremiumFragment">
+
+    <TextView
+        android:id="@+id/recommendNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended for you"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recommendedRV"/>
+
+    <ImageView
+        android:id="@+id/recommendArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/recommendNameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/recommendNameTV" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendedRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            tools:itemCount="5"
+            android:clipToPadding="false"
+            tools:listitem="@layout/premium_app_design"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recommendNameTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/offlineGameTV"/>
+
+    <TextView
+        android:id="@+id/offlineGameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline games"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendedRV"/>
+
+    <ImageView
+        android:id="@+id/offlineGameArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/offlineGameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/offlineGameTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/offlineRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        tools:listitem="@layout/premium_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offlineGameTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/stylizedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stylized games"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offlineRV"/>
+
+    <ImageView
+        android:id="@+id/stylizedGameArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/stylizedTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/stylizedTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stylizedRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        tools:listitem="@layout/premium_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stylizedTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/casualGamesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casual games"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stylizedRV"/>
+
+    <ImageView
+        android:id="@+id/casualGameArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/casualGamesTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/casualGamesTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/casualRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        tools:listitem="@layout/premium_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casualGamesTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/multiplayGamesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiplayer games"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casualRV"/>
+
+    <ImageView
+        android:id="@+id/multiGameArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/multiplayGamesTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/multiplayGamesTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/multiRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        tools:listitem="@layout/premium_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplayGamesTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/familyGamesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Family games"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiRV"/>
+
+    <ImageView
+        android:id="@+id/familyGameArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/familyGamesTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toTopOf="@+id/familyGamesTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/familyRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="5"
+        android:clipToPadding="false"
+        tools:listitem="@layout/premium_app_design"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/familyGamesTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardV1"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardV2"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/gifImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardV2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardV1"
+        app:layout_constraintEnd_toStartOf="@+id/appNameTV"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/snapchat"
+            android:scaleType="centerCrop"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/appNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="Application Name"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/cardV2"
+        app:layout_constraintTop_toTopOf="@+id/cardV2"
+        app:layout_constraintBottom_toTopOf="@+id/appTypeTV"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/appTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Racing"
+        app:layout_constraintBottom_toTopOf="@+id/appRatingTV"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTV"
+        app:layout_constraintStart_toStartOf="@+id/appNameTV"
+        app:layout_constraintEnd_toStartOf="@+id/appTypeFeature"/>
+
+    <TextView
+        android:id="@+id/appTypeFeature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motorcycle"
+        app:layout_constraintStart_toEndOf="@+id/appTypeTV"
+        app:layout_constraintTop_toTopOf="@+id/appTypeTV"
+        app:layout_constraintBottom_toBottomOf="@+id/appTypeTV"
+        android:layout_marginStart="5dp"
+        />
+
+    <TextView
+        android:id="@+id/appRatingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.4"
+        app:layout_constraintTop_toBottomOf="@+id/appTypeTV"
+        app:layout_constraintStart_toStartOf="@+id/appTypeTV"
+        app:layout_constraintBottom_toBottomOf="@+id/cardV2"
+        />
+
+    <TextView
+        android:id="@+id/appSizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="105 MB"
+        app:layout_constraintTop_toTopOf="@+id/appRatingTV"
+        app:layout_constraintBottom_toBottomOf="@+id/appRatingTV"
+        app:layout_constraintStart_toEndOf="@+id/appRatingTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
