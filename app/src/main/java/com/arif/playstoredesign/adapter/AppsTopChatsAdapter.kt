@@ -13,6 +13,7 @@ class AppsTopChatsAdapter(private var dataList: ArrayList<RowAppDataModel>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
+
         val binding = RowAppDesignBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
 
